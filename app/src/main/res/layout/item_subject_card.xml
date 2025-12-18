@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="#FFFFFF"
+    android:elevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btnDeleteSubject"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#F44336"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Delete Class"/>
+
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnDeleteSubject"
+            android:layout_marginEnd="8dp"
+            android:text="CS-101: Intro to Computing"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvSubjectName"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvStudentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Students: 0"
+                android:textColor="#555555"/>
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tvClassesHeld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Classes Held: 0"
+                android:textColor="#555555"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

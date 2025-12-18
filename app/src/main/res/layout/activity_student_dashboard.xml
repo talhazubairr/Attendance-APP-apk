@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2196F3"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Portal"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/btnLogout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_lock_power_off"
+            android:contentDescription="Logout"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:tint="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Academic Standing"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvOverallStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Good"
+                    android:textColor="#4CAF50"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Based on 75% Rule"
+                    android:textSize="12sp"
+                    android:textColor="#777777"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Subjects Attendance"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudentSubjects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
